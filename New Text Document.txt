@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+
+const ClickEvent = () => {
+  const [message, setMessage] = useState('');
+
+  const handleClick = () => {
+    setMessage('Button Clicked!');
+  };
+
+  const styles = {
+    button: {
+      padding: '10px 20px',
+      fontSize: '16px',
+      backgroundColor: 'black',
+      color: 'white',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      marginBottom: '10px',
+    },
+    message: {
+      fontSize: '18px',
+      color: 'white',
+      fontWeight: 'bold',
+    },
+  };
+
+  return (
+    <div>
+      <button style={styles.button} onClick={handleClick}>
+        Click Me
+      </button>
+      <div style={styles.message}>{message}</div>
+    </div>
+  );
+};
+
+export default ClickEvent;
